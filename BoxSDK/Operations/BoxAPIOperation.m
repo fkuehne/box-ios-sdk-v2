@@ -324,8 +324,8 @@ static BOOL BoxOperationStateTransitionIsValid(BoxAPIOperationState fromState, B
 
 - (void)cancel
 {
-    [super cancel];
     [self performSelector:@selector(cancelConnection) onThread:[[self class] globalAPIOperationNetworkThread] withObject:nil waitUntilDone:NO];
+    [super cancel];
     BOXLog(@"BoxAPIOperation %@ was cancelled", self);
 }
 

@@ -733,6 +733,14 @@ typedef enum {
     }
 }
 
+- (void)cancel
+{
+    // Close the output stream before cancelling the operation
+    [self close];
+
+    [super cancel];
+}
+
 #pragma mark - Multipart Stream methods
 
 - (unsigned long long)contentLength

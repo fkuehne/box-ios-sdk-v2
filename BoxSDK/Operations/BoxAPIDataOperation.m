@@ -108,6 +108,14 @@
     }
 }
 
+- (void)cancel
+{
+    // Close the output stream before cancelling the operation
+    [self close];
+
+    [super cancel];
+}
+
 #pragma mark - Output Stream methods
 
 - (long long)contentLength
