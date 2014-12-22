@@ -46,6 +46,9 @@ NSString *const BoxOAuth2TokenRequestRedirectURIKey = @"redirect_uri";
 NSString *const BoxOAuth2TokenRequestGrantTypeAuthorizationCode = @"authorization_code";
 NSString *const BoxOAuth2TokenRequestGrantTypeRefreshToken = @"refresh_token";
 
+// logout request
+NSString *const BoxOAuth2LogoutTokenKey = @"token";
+
 // Item Types
 BoxAPIItemType *const BoxAPIItemTypeFile = @"file";
 BoxAPIItemType *const BoxAPIItemTypeFolder = @"folder";

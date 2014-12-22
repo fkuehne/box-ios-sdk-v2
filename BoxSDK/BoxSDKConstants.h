@@ -46,6 +46,8 @@ extern NSString *const BoxOAuth2TokenRequestRedirectURIKey;
 extern NSString *const BoxOAuth2TokenRequestGrantTypeAuthorizationCode;
 extern NSString *const BoxOAuth2TokenRequestGrantTypeRefreshToken;
 
+// logout request
+extern NSString *const BoxOAuth2LogoutTokenKey;
 
 // Item Types
 typedef NSString BoxAPIItemType;
