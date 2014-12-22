@@ -126,6 +126,28 @@ NSString *const BoxOAuth2AuthenticationErrorKey = @"BoxOAuth2AuthenticationError
     BOXAbstract();
 }
 
+#pragma mark - Logout
+- (void)logout
+{
+    NSURL *revokeURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/oauth2/revoke", self.APIBaseURLString]];
+    NSDictionary *POSTParams = @{
+                                 BoxOAuth2TokenRequestClientIDKey : self.clientID,
+                                 BoxOAuth2TokenRequestClientSecretKey : self.clientSecret,
+                                 BoxOAuth2LogoutTokenKey : self.refreshToken
+                                 };
+
+    BoxAPIOAuth2ToJSONOperation *operation = [[BoxAPIOAuth2ToJSONOperation alloc] initWithURL:revokeURL
+                                                                                   HTTPMethod:BoxAPIHTTPMethodPOST
+                                                                                         body:POSTParams
+                                                                                  queryParams:nil
+                                                                                OAuth2Session:self];
+    _accessToken = @"INVALID_TOKEN";
+    _refreshToken = @"INVALID_TOKEN";
+    self.accessTokenExpiration = nil;
+
+    [self.queueManager enqueueOperation:operation];
+}
+
 #pragma mark - Session info
 - (BOOL)isAuthorized
 {

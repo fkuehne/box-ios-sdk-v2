@@ -211,6 +211,19 @@ extern NSString *const BoxOAuth2AuthenticationErrorKey;
  */
 - (void)performRefreshTokenGrant:(NSString *)expiredAccessToken;
 
+#pragma mark - Logout
+/** @name Logout */
+
+/**
+ * Logs the user out and sets the access and refresh token to invalid_token
+ *
+ * @warning when you call this method delete any saved tokens in your keychain
+ *
+ * @see accessToken
+ */
+
+- (void)logout;
+
 #pragma mark - Session info
 /** @name Session Information */
 
