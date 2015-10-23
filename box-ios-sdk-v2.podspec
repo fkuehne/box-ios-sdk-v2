@@ -19,12 +19,14 @@ Pod::Spec.new do |s|
 # File patterns
 
   s.ios.source_files        = "BoxSDK/*.{h,m}", "BoxSDK/**/*.{h,m}"
-  s.tvos.source_files        = "BoxSDK/*.{h,m}", "BoxSDK/**/*.{h,m}"
+  s.tvos.source_files       = "BoxSDK/*.{h,m}", "BoxSDK/**/*.{h,m}"
   s.osx.source_files        = "BoxCocoaSDK/*.{h,m}", "BoxCocoaSDK/**/*.{h,m}",
                               "BoxSDK/*.{h,m}", "BoxSDK/**/*.{h,m}"
 
   s.ios.exclude_files       = "BoxSDK/External/ISO8601DateFormatter/BoxISO8601DateFormatter.{h,m}"
-  s.tvos.exclude_files       = "BoxSDK/External/ISO8601DateFormatter/BoxISO8601DateFormatter.{h,m}"
+  s.tvos.exclude_files      = "BoxSDK/External/ISO8601DateFormatter/BoxISO8601DateFormatter.{h,m}",
+                              "BoxSDK/OAuth2/BoxAuthorizationViewController.{h,m}",
+                              "BoxSDK/FolderPicker/BoxItemPickerViewController.{h,m}"
   s.osx.exclude_files       = "BoxSDK/BoxSDK.{h,m}",
                               "BoxSDK/Categories/UIImage+BoxAdditions.{h,m}",
                               "BoxSDK/Categories/BoxItem+BoxAdditions.{h,m}",
