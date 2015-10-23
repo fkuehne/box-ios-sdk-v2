@@ -16,7 +16,9 @@
 #import <BoxSDK/BoxSDKErrors.h>
 
 // OAuth2
+#if TARGET_OS_IOS
 #import <BoxSDK/BoxAuthorizationViewController.h>
+#endif
 #import <BoxSDK/BoxOAuth2Session.h>
 #import <BoxSDK/BoxSerialOAuth2Session.h>
 #import <BoxSDK/BoxParallelOAuth2Session.h>

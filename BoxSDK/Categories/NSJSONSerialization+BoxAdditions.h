@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Box. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 /**
  * The BoxAdditions category on NSJSONSerialization provides a class method for ensuring
  * that an object extracted from a decoded JSON object is of the expected type.

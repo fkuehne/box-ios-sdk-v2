@@ -43,8 +43,10 @@
     self.tableView.rowHeight = kCellHeight;
     self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+#if TARGET_OS_IOS
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+#endif
+
     UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.tableView.frame.size.width, 1.0)];
     tableHeaderView.backgroundColor = [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0];
     self.tableView.tableHeaderView = tableHeaderView;

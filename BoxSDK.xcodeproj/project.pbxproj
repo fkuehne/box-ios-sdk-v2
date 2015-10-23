@@ -9,6 +9,54 @@
 /* Begin PBXBuildFile section */
 		70B086F718E0DC0200EA2D8F /* BoxSharedObjectBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B086F618E0DC0200EA2D8F /* BoxSharedObjectBuilderTests.m */; };
 		70B086F818E0DC1300EA2D8F /* BoxSharedObjectBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B086F618E0DC0200EA2D8F /* BoxSharedObjectBuilderTests.m */; };
+		7D4408151BDA78CA0080FB42 /* BoxItemPickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E155C218D7A4A600E3C302 /* BoxItemPickerHelper.m */; };
+		7D4408161BDA78CA0080FB42 /* BoxItemPickerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E155C418D7A4A600E3C302 /* BoxItemPickerNavigationController.m */; };
+		7D4408171BDA78CA0080FB42 /* BOXItemPickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E155C618D7A4A600E3C302 /* BOXItemPickerTableViewCell.m */; };
+		7D4408181BDA78CA0080FB42 /* BoxItemPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E155C818D7A4A600E3C302 /* BoxItemPickerTableViewController.m */; };
+		7D44081A1BDA78D90080FB42 /* NSString+BoxURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD97D172CE2C50052AD11 /* NSString+BoxURLHelper.m */; };
+		7D44081B1BDA78D90080FB42 /* NSURL+BoxURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD97F172CE2C50052AD11 /* NSURL+BoxURLHelper.m */; };
+		7D44081C1BDA78D90080FB42 /* NSString+BoxAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C11A3E175DA92E0001EC88 /* NSString+BoxAdditions.m */; };
+		7D44081D1BDA78D90080FB42 /* UIImage+BoxAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C11A43175DACCE0001EC88 /* UIImage+BoxAdditions.m */; };
+		7D44081E1BDA78D90080FB42 /* BoxItem+BoxAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C58BC261175EDD670071BF37 /* BoxItem+BoxAdditions.m */; };
+		7D44081F1BDA78D90080FB42 /* NSJSONSerialization+BoxAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF153B1217C346D6008D636C /* NSJSONSerialization+BoxAdditions.m */; };
+		7D4408201BDA78EA0080FB42 /* BoxCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD988172CE2C50052AD11 /* BoxCollection.m */; };
+		7D4408211BDA78EA0080FB42 /* BoxFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD98A172CE2C50052AD11 /* BoxFile.m */; };
+		7D4408221BDA78EA0080FB42 /* BoxFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD98C172CE2C50052AD11 /* BoxFolder.m */; };
+		7D4408231BDA78EA0080FB42 /* BoxItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD98E172CE2C50052AD11 /* BoxItem.m */; };
+		7D4408241BDA78EA0080FB42 /* BoxModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD990172CE2C50052AD11 /* BoxModel.m */; };
+		7D4408251BDA78EA0080FB42 /* BoxUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD992172CE2C50052AD11 /* BoxUser.m */; };
+		7D4408261BDA78EA0080FB42 /* BoxWebLink.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD994172CE2C50052AD11 /* BoxWebLink.m */; };
+		7D4408271BDA78EA0080FB42 /* BoxModelComparators.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6E06A717AE66AF0039F17D /* BoxModelComparators.m */; };
+		7D4408281BDA78EA0080FB42 /* BoxComment.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0F91EB183E881F0090696B /* BoxComment.m */; };
+		7D44082A1BDA78FA0080FB42 /* BoxOAuth2Session.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD999172CE2C50052AD11 /* BoxOAuth2Session.m */; };
+		7D44082B1BDA78FA0080FB42 /* BoxSerialOAuth2Session.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD99B172CE2C50052AD11 /* BoxSerialOAuth2Session.m */; };
+		7D44082C1BDA78FA0080FB42 /* BoxParallelOAuth2Session.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA6F5D173F1C750089680F /* BoxParallelOAuth2Session.m */; };
+		7D44082D1BDA79080080FB42 /* BoxAPIAuthenticatedOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD99E172CE2C50052AD11 /* BoxAPIAuthenticatedOperation.m */; };
+		7D44082E1BDA79080080FB42 /* BoxAPIDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9A0172CE2C50052AD11 /* BoxAPIDataOperation.m */; };
+		7D44082F1BDA79080080FB42 /* BoxAPIJSONOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9A2172CE2C50052AD11 /* BoxAPIJSONOperation.m */; };
+		7D4408301BDA79080080FB42 /* BoxAPIMultipartToJSONOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9A4172CE2C50052AD11 /* BoxAPIMultipartToJSONOperation.m */; };
+		7D4408311BDA79080080FB42 /* BoxAPIOAuth2ToJSONOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9A6172CE2C50052AD11 /* BoxAPIOAuth2ToJSONOperation.m */; };
+		7D4408321BDA79080080FB42 /* BoxAPIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9A8172CE2C50052AD11 /* BoxAPIOperation.m */; };
+		7D4408331BDA79140080FB42 /* BoxAPIQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9AB172CE2C50052AD11 /* BoxAPIQueueManager.m */; };
+		7D4408341BDA79140080FB42 /* BoxSerialAPIQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9AD172CE2C50052AD11 /* BoxSerialAPIQueueManager.m */; };
+		7D4408351BDA79140080FB42 /* BoxParallelAPIQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA6F55173F13C10089680F /* BoxParallelAPIQueueManager.m */; };
+		7D4408361BDA79250080FB42 /* BoxUsersRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9400B0BA17FB8BE00077D4E7 /* BoxUsersRequestBuilder.m */; };
+		7D4408371BDA79250080FB42 /* BoxAPIRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9B0172CE2C50052AD11 /* BoxAPIRequestBuilder.m */; };
+		7D4408381BDA79250080FB42 /* BoxFilesRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9B2172CE2C50052AD11 /* BoxFilesRequestBuilder.m */; };
+		7D4408391BDA79250080FB42 /* BoxFoldersRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9B4172CE2C50052AD11 /* BoxFoldersRequestBuilder.m */; };
+		7D44083A1BDA79250080FB42 /* BoxItemsRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9B6172CE2C50052AD11 /* BoxItemsRequestBuilder.m */; };
+		7D44083B1BDA79250080FB42 /* BoxSharedObjectBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9B8172CE2C50052AD11 /* BoxSharedObjectBuilder.m */; };
+		7D44083C1BDA79250080FB42 /* BoxCommentsRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0F91F3183EA1890090696B /* BoxCommentsRequestBuilder.m */; };
+		7D44083D1BDA79250080FB42 /* BoxModelBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0F91FC183EA5430090696B /* BoxModelBuilder.m */; };
+		7D44083E1BDA79250080FB42 /* BoxSearchRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E436276B183EDCA000C608E1 /* BoxSearchRequestBuilder.m */; };
+		7D44083F1BDA79350080FB42 /* BoxSearchResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4362755183E939A00C608E1 /* BoxSearchResourceManager.m */; };
+		7D4408401BDA79350080FB42 /* BoxUsersResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9400B0BE17FB8BEA0077D4E7 /* BoxUsersResourceManager.m */; };
+		7D4408411BDA79350080FB42 /* BoxAPIResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9BB172CE2C50052AD11 /* BoxAPIResourceManager.m */; };
+		7D4408421BDA79350080FB42 /* BoxFilesResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9BD172CE2C50052AD11 /* BoxFilesResourceManager.m */; };
+		7D4408431BDA79350080FB42 /* BoxFoldersResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9BF172CE2C50052AD11 /* BoxFoldersResourceManager.m */; };
+		7D4408441BDA79350080FB42 /* BoxCommentsResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0F91F7183EA1AF0090696B /* BoxCommentsResourceManager.m */; };
+		7D4408451BDA79430080FB42 /* BoxSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E470434516D41DC500FED29A /* BoxSDK.m */; };
+		7D4408461BDA79430080FB42 /* BoxSDKConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E44A95B016E21C5100356ADA /* BoxSDKConstants.m */; };
 		9400B0BB17FB8BE00077D4E7 /* BoxUsersRequestBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9400B0B917FB8BE00077D4E7 /* BoxUsersRequestBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9400B0BC17FB8BE00077D4E7 /* BoxUsersRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9400B0BA17FB8BE00077D4E7 /* BoxUsersRequestBuilder.m */; };
 		9400B0BF17FB8BEA0077D4E7 /* BoxUsersResourceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9400B0BD17FB8BEA0077D4E7 /* BoxUsersResourceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -491,6 +539,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7D44080A1BDA78980080FB42 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E470433916D41DC500FED29A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -514,6 +571,7 @@
 
 /* Begin PBXFileReference section */
 		70B086F618E0DC0200EA2D8F /* BoxSharedObjectBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxSharedObjectBuilderTests.m; sourceTree = "<group>"; };
+		7D44080C1BDA78980080FB42 /* libBoxTVSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBoxTVSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9400B0B917FB8BE00077D4E7 /* BoxUsersRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxUsersRequestBuilder.h; sourceTree = "<group>"; };
 		9400B0BA17FB8BE00077D4E7 /* BoxUsersRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxUsersRequestBuilder.m; sourceTree = "<group>"; };
 		9400B0BD17FB8BEA0077D4E7 /* BoxUsersResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxUsersResourceManager.h; sourceTree = "<group>"; };
@@ -900,6 +958,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7D4408091BDA78980080FB42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4081D8A1758728900F6D6AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1219,6 +1284,7 @@
 				E4081D8D1758728900F6D6AA /* BoxSDKResources.bundle */,
 				F0E5E2E717A78AEF00153646 /* BoxCocoaSDK.framework */,
 				F0E5E2FD17A78AEF00153646 /* BoxCocoaSDKTests.octest */,
+				7D44080C1BDA78980080FB42 /* libBoxTVSDK.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1735,6 +1801,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7D44080B1BDA78980080FB42 /* BoxTVSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D4408141BDA78980080FB42 /* Build configuration list for PBXNativeTarget "BoxTVSDK" */;
+			buildPhases = (
+				7D4408081BDA78980080FB42 /* Sources */,
+				7D4408091BDA78980080FB42 /* Frameworks */,
+				7D44080A1BDA78980080FB42 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BoxTVSDK;
+			productName = BoxTVSDK;
+			productReference = 7D44080C1BDA78980080FB42 /* libBoxTVSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		E4081D8C1758728900F6D6AA /* BoxSDKResources */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4081D971758728900F6D6AA /* Build configuration list for PBXNativeTarget "BoxSDKResources" */;
@@ -1787,7 +1870,7 @@
 			name = BoxSDKTests;
 			productName = BoxSDKTests;
 			productReference = E470434C16D41DC500FED29A /* BoxSDKTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		F0E5E2E617A78AEF00153646 /* BoxCocoaSDK */ = {
 			isa = PBXNativeTarget;
@@ -1824,7 +1907,7 @@
 			name = BoxCocoaSDKTests;
 			productName = BoxCocoaSDKTests;
 			productReference = F0E5E2FD17A78AEF00153646 /* BoxCocoaSDKTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -1832,9 +1915,13 @@
 		E470433316D41DC500FED29A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0710;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Box;
 				TargetAttributes = {
+					7D44080B1BDA78980080FB42 = {
+						CreatedOnToolsVersion = 7.1;
+					};
 					F0E5E2FC17A78AEF00153646 = {
 						TestTargetID = E470433A16D41DC500FED29A;
 					};
@@ -1857,6 +1944,7 @@
 				E4081D8C1758728900F6D6AA /* BoxSDKResources */,
 				F0E5E2E617A78AEF00153646 /* BoxCocoaSDK */,
 				F0E5E2FC17A78AEF00153646 /* BoxCocoaSDKTests */,
+				7D44080B1BDA78980080FB42 /* BoxTVSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -2100,6 +2188,61 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7D4408081BDA78980080FB42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D4408151BDA78CA0080FB42 /* BoxItemPickerHelper.m in Sources */,
+				7D4408161BDA78CA0080FB42 /* BoxItemPickerNavigationController.m in Sources */,
+				7D4408171BDA78CA0080FB42 /* BOXItemPickerTableViewCell.m in Sources */,
+				7D4408181BDA78CA0080FB42 /* BoxItemPickerTableViewController.m in Sources */,
+				7D44081A1BDA78D90080FB42 /* NSString+BoxURLHelper.m in Sources */,
+				7D44081B1BDA78D90080FB42 /* NSURL+BoxURLHelper.m in Sources */,
+				7D44081C1BDA78D90080FB42 /* NSString+BoxAdditions.m in Sources */,
+				7D44081D1BDA78D90080FB42 /* UIImage+BoxAdditions.m in Sources */,
+				7D44081E1BDA78D90080FB42 /* BoxItem+BoxAdditions.m in Sources */,
+				7D44081F1BDA78D90080FB42 /* NSJSONSerialization+BoxAdditions.m in Sources */,
+				7D4408201BDA78EA0080FB42 /* BoxCollection.m in Sources */,
+				7D4408211BDA78EA0080FB42 /* BoxFile.m in Sources */,
+				7D4408221BDA78EA0080FB42 /* BoxFolder.m in Sources */,
+				7D4408231BDA78EA0080FB42 /* BoxItem.m in Sources */,
+				7D4408241BDA78EA0080FB42 /* BoxModel.m in Sources */,
+				7D4408251BDA78EA0080FB42 /* BoxUser.m in Sources */,
+				7D4408261BDA78EA0080FB42 /* BoxWebLink.m in Sources */,
+				7D4408271BDA78EA0080FB42 /* BoxModelComparators.m in Sources */,
+				7D4408281BDA78EA0080FB42 /* BoxComment.m in Sources */,
+				7D44082A1BDA78FA0080FB42 /* BoxOAuth2Session.m in Sources */,
+				7D4408361BDA79250080FB42 /* BoxUsersRequestBuilder.m in Sources */,
+				7D4408371BDA79250080FB42 /* BoxAPIRequestBuilder.m in Sources */,
+				7D4408381BDA79250080FB42 /* BoxFilesRequestBuilder.m in Sources */,
+				7D4408391BDA79250080FB42 /* BoxFoldersRequestBuilder.m in Sources */,
+				7D44083A1BDA79250080FB42 /* BoxItemsRequestBuilder.m in Sources */,
+				7D44083B1BDA79250080FB42 /* BoxSharedObjectBuilder.m in Sources */,
+				7D44083C1BDA79250080FB42 /* BoxCommentsRequestBuilder.m in Sources */,
+				7D44083D1BDA79250080FB42 /* BoxModelBuilder.m in Sources */,
+				7D44083E1BDA79250080FB42 /* BoxSearchRequestBuilder.m in Sources */,
+				7D44082B1BDA78FA0080FB42 /* BoxSerialOAuth2Session.m in Sources */,
+				7D44082C1BDA78FA0080FB42 /* BoxParallelOAuth2Session.m in Sources */,
+				7D44082D1BDA79080080FB42 /* BoxAPIAuthenticatedOperation.m in Sources */,
+				7D44082E1BDA79080080FB42 /* BoxAPIDataOperation.m in Sources */,
+				7D44082F1BDA79080080FB42 /* BoxAPIJSONOperation.m in Sources */,
+				7D4408301BDA79080080FB42 /* BoxAPIMultipartToJSONOperation.m in Sources */,
+				7D4408311BDA79080080FB42 /* BoxAPIOAuth2ToJSONOperation.m in Sources */,
+				7D4408321BDA79080080FB42 /* BoxAPIOperation.m in Sources */,
+				7D4408331BDA79140080FB42 /* BoxAPIQueueManager.m in Sources */,
+				7D4408341BDA79140080FB42 /* BoxSerialAPIQueueManager.m in Sources */,
+				7D4408351BDA79140080FB42 /* BoxParallelAPIQueueManager.m in Sources */,
+				7D44083F1BDA79350080FB42 /* BoxSearchResourceManager.m in Sources */,
+				7D4408401BDA79350080FB42 /* BoxUsersResourceManager.m in Sources */,
+				7D4408411BDA79350080FB42 /* BoxAPIResourceManager.m in Sources */,
+				7D4408421BDA79350080FB42 /* BoxFilesResourceManager.m in Sources */,
+				7D4408431BDA79350080FB42 /* BoxFoldersResourceManager.m in Sources */,
+				7D4408441BDA79350080FB42 /* BoxCommentsResourceManager.m in Sources */,
+				7D4408451BDA79430080FB42 /* BoxSDK.m in Sources */,
+				7D4408461BDA79430080FB42 /* BoxSDKConstants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4081D891758728900F6D6AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2328,6 +2471,59 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7D4408121BDA78980080FB42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		7D4408131BDA78980080FB42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		E4081D981758728900F6D6AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2589,6 +2785,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7D4408141BDA78980080FB42 /* Build configuration list for PBXNativeTarget "BoxTVSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D4408121BDA78980080FB42 /* Debug */,
+				7D4408131BDA78980080FB42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E4081D971758728900F6D6AA /* Build configuration list for PBXNativeTarget "BoxSDKResources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

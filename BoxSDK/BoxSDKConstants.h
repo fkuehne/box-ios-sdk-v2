@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Box. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 // API URLs
 extern NSString *const BoxAPIBaseURL;
 extern NSString *const BoxAPIUploadBaseURL;

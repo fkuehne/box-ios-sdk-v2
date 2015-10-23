@@ -10,7 +10,9 @@
 #import <UIKit/UIKit.h>
 
 #import <BoxSDK/BoxItemPickerTableViewController.h>
+#if TARGET_OS_IOS
 #import <BoxSDK/BoxAuthorizationViewController.h>
+#endif
 
 typedef NS_ENUM(NSUInteger, BoxItemPickerObjectType) {
     BoxItemPickerObjectTypeFile,
@@ -70,7 +72,11 @@ typedef NS_ENUM(NSUInteger, BoxItemPickerObjectType) {
  *
  * Selection events are handled by the BoxFolderPickerDelegate delegate protocol.
  */
+#if TARGET_OS_IOS
 @interface BoxItemPickerViewController : UIViewController <BoxItemPickerTableViewControllerDelegate, BoxAuthorizationViewControllerDelegate>
+#else
+@interface BoxItemPickerViewController : UIViewController <BoxItemPickerTableViewControllerDelegate>
+#endif
 
 @property (nonatomic, readwrite, weak) id<BOXItemPickerDelegate> delegate;
 
