@@ -12,7 +12,6 @@
 		7D4408151BDA78CA0080FB42 /* BoxItemPickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E155C218D7A4A600E3C302 /* BoxItemPickerHelper.m */; };
 		7D4408161BDA78CA0080FB42 /* BoxItemPickerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E155C418D7A4A600E3C302 /* BoxItemPickerNavigationController.m */; };
 		7D4408171BDA78CA0080FB42 /* BOXItemPickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E155C618D7A4A600E3C302 /* BOXItemPickerTableViewCell.m */; };
-		7D4408181BDA78CA0080FB42 /* BoxItemPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E155C818D7A4A600E3C302 /* BoxItemPickerTableViewController.m */; };
 		7D44081A1BDA78D90080FB42 /* NSString+BoxURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD97D172CE2C50052AD11 /* NSString+BoxURLHelper.m */; };
 		7D44081B1BDA78D90080FB42 /* NSURL+BoxURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD97F172CE2C50052AD11 /* NSURL+BoxURLHelper.m */; };
 		7D44081C1BDA78D90080FB42 /* NSString+BoxAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C11A3E175DA92E0001EC88 /* NSString+BoxAdditions.m */; };
@@ -2195,7 +2194,6 @@
 				7D4408151BDA78CA0080FB42 /* BoxItemPickerHelper.m in Sources */,
 				7D4408161BDA78CA0080FB42 /* BoxItemPickerNavigationController.m in Sources */,
 				7D4408171BDA78CA0080FB42 /* BOXItemPickerTableViewCell.m in Sources */,
-				7D4408181BDA78CA0080FB42 /* BoxItemPickerTableViewController.m in Sources */,
 				7D44081A1BDA78D90080FB42 /* NSString+BoxURLHelper.m in Sources */,
 				7D44081B1BDA78D90080FB42 /* NSURL+BoxURLHelper.m in Sources */,
 				7D44081C1BDA78D90080FB42 /* NSString+BoxAdditions.m in Sources */,
@@ -2792,6 +2790,7 @@
 				7D4408131BDA78980080FB42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4081D971758728900F6D6AA /* Build configuration list for PBXNativeTarget "BoxSDKResources" */ = {
 			isa = XCConfigurationList;

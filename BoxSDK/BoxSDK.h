@@ -66,8 +66,10 @@
 
 // Item Picker
 #import <BoxSDK/BoxItemPickerHelper.h>
+#if TARGET_OS_IOS
 #import <BoxSDK/BoxItemPickerViewController.h>
 #import <BoxSDK/BoxItemPickerTableViewController.h>
+#endif
 #import <BoxSDK/BoxItemPickerNavigationController.h>
 
 @protocol BOXItemPickerDelegate;
@@ -198,6 +200,7 @@ extern NSString *const BoxAPIBaseURL;
 - (void)setAPIBaseURL:(NSString *)APIBaseURL;
 
 
+#if TARGET_OS_IOS
 #pragma mark - Folder Picker
 /** @name Folder Picker */
 
@@ -226,7 +229,7 @@ extern NSString *const BoxAPIBaseURL;
  */
 - (BoxItemPickerViewController *)itemPickerWithDelegate:(id <BOXItemPickerDelegate>)delegate 
                                    selectableObjectType:(BoxItemPickerObjectType)selectableObjectType;
-
+#endif
 
 #pragma mark - Ressources Bundle
 /** @name Ressources Bundle */
