@@ -14,7 +14,7 @@
 #import <BoxSDK/BoxItemPickerTableViewCell.h>
 #import <BoxSDK/UIImage+BoxAdditions.h>
 #import <BoxSDK/NSString+BoxAdditions.h>
-#import <BoxSDK/BOXItem+BoxAdditions.h>
+#import <BoxSDK/BoxItem+BoxAdditions.h>
 
 @implementation BoxItemPickerTableViewController
 
