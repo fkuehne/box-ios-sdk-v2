@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 @protocol BoxAuthorizationViewControllerDelegate;
 
 /**
- * BoxAuthorizationViewController is a UIViewController that displays a UIWebview
+ * BoxAuthorizationViewController is a UIViewController that displays a WKWebview
  * that loads the OAuth2 authorize URL. An app may present this view controller to
  * log a user in to Box.
  *
@@ -28,7 +29,7 @@
  * @warning This is the only part of the Box SDK that is specific to iOS. If you wish to
  *   include the Box SDK in an OS X project, remove this source file.
  */
-@interface BoxAuthorizationViewController : UIViewController <UIWebViewDelegate, NSURLConnectionDataDelegate, UIAlertViewDelegate>
+@interface BoxAuthorizationViewController : UIViewController <WKNavigationDelegate, NSURLConnectionDataDelegate, UIAlertViewDelegate>
 
 /** @name Delegate */
 

@@ -77,10 +77,9 @@
 {
 	[[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
 
-	UIWebView *webView = [[UIWebView alloc] init];
-	[webView setScalesPageToFit:YES];
+	WKWebView *webView = [[WKWebView alloc] init];
 	webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	webView.delegate = self;
+	webView.navigationDelegate = self;
 
 	self.view = webView;
 }
@@ -93,14 +92,14 @@
 	{
 		NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.authorizationURL];
 
-		UIWebView *webView = (UIWebView *)self.view;
+		WKWebView *webView = (WKWebView *)self.view;
 		[webView loadRequest:request];
 	}
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-	UIWebView *webView = (UIWebView *)self.view;
+	WKWebView *webView = (WKWebView *)self.view;
 	[webView stopLoading];
 
 	[self.connection cancel];
@@ -156,21 +155,21 @@
 	}
 }
 
-#pragma mark - UIWebViewDelegate methods
+#pragma mark - WKNavigationDelegate methods
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
-	BOXLog(@"Web view should start request %@ with navigation type %ld", request, (long)navigationType);
-	BOXLog(@"Request Headers \n%@", [request allHTTPHeaderFields]);
+	BOXLog(@"Web view should start request %@", navigationAction.request);
+	BOXLog(@"Request Headers \n%@", [navigationAction.request allHTTPHeaderFields]);
 
 	// Before we proceed with handling this request, check if it's about:blank - if it is, do not attempt to load it.
 	// Background: We've run into a scenario where an admin included a support help-desk plugin on their SSO page
 	// which would (probably erroneously) first load about:blank, then attempt to load its icon. The web view would
 	// fail to load about:blank, which would cause the whole page to not appear. So we realized that we can and should
 	// generally protect against loading about:blank.
-	if ([request.URL isEqual:[NSURL URLWithString:@"about:blank"]])
+	if ([navigationAction.request.URL isEqual:[NSURL URLWithString:@"about:blank"]])
 	{
-		return NO;
+        decisionHandler(WKNavigationActionPolicyCancel);
 	}
 
 	[self.delegate authorizationViewControllerDidStartLoading:self];
@@ -184,33 +183,37 @@
 	BOOL requestIsForLoginRedirectScheme = NO;
 	if ([self.redirectURIString length] > 0)
 	{
-		requestIsForLoginRedirectScheme = [[[request URL] scheme] isEqualToString:[[NSURL URLWithString:self.redirectURIString] scheme]];
+		requestIsForLoginRedirectScheme = [[[navigationAction.request URL] scheme] isEqualToString:[[NSURL URLWithString:self.redirectURIString] scheme]];
 	}
 
 	if (requestIsForLoginRedirectScheme)
 	{
 		if ([self.delegate respondsToSelector:@selector(authorizationViewController:shouldLoadReceivedOAuth2RedirectRequest:)])
 		{
-			return [self.delegate authorizationViewController:self shouldLoadReceivedOAuth2RedirectRequest:request];
+            if ([self.delegate authorizationViewController:self shouldLoadReceivedOAuth2RedirectRequest:navigationAction.request]) {
+                decisionHandler(WKNavigationActionPolicyAllow);
+            } else {
+                decisionHandler(WKNavigationActionPolicyCancel);
+            }
 		}
 	}
 	else if (self.connectionIsTrusted == NO)
 	{
 		BOXLog(@"Was not authenticated, launching URLConnection and not loading the request in the web view");
-		self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+		self.connection = [[NSURLConnection alloc] initWithRequest:navigationAction.request delegate:self];
 		BOXLog(@"URLConnection is %@", self.connection);
-		return NO;
+        decisionHandler(WKNavigationActionPolicyCancel);
 	}
 
-	return YES;
+    return decisionHandler(WKNavigationActionPolicyAllow);
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
 {
 	BOXLogFunction();
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error
 {
 	BOXLog(@"Web view %@ did fail load with error %@", webView, error);
 
@@ -247,16 +250,8 @@
 		}
 		
 		BOXLog(@"Checking if error is due to an iframe request.");
-		BOXLog(@"Request URL is %@ while main document URL is %@", requestURLString, [webView.request mainDocumentURL]);
-		
-		BOOL isMainDocumentURL = [requestURLString isEqualToString:[[webView.request mainDocumentURL] absoluteString]];
-		if (isMainDocumentURL == NO)
-		{
-			// If the failing URL is not the main document URL, then the load error is in an iframe and can be ignored
-			BOXLog(@"Ignoring error as the load failure is in an iframe");
-			ignoreError = YES;
-		}
-	}
+		BOXLog(@"Request URL is %@ ", requestURLString);
+    }
 
 	if (ignoreError == NO)
 	{
@@ -267,7 +262,7 @@
 	}
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
 	BOXLogFunction();
 	[self.delegate authorizationViewControllerDidFinishLoading:self];
@@ -443,10 +438,10 @@
 {
 	BOXLog(@"Connection %@ did finish loading. Requesting that the webview load the data (%lu bytes) with reponse %@", connection, (unsigned long)[self.connectionData length], self.connectionResponse);
 	self.connectionIsTrusted = YES;
-	[(UIWebView *)self.view loadData:self.connectionData
-							MIMEType:[self.connectionResponse MIMEType]
-					textEncodingName:[self.connectionResponse textEncodingName]
-							 baseURL:[self.connectionResponse URL]];
+	[(WKWebView *)self.view loadData:self.connectionData
+                            MIMEType:[self.connectionResponse MIMEType]
+               characterEncodingName:[self.connectionResponse textEncodingName]
+                             baseURL:[self.connectionResponse URL]];
 
 	self.connection = nil;
 	self.connectionResponse = nil;
