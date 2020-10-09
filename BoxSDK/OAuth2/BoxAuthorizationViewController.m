@@ -170,6 +170,7 @@
 	if ([navigationAction.request.URL isEqual:[NSURL URLWithString:@"about:blank"]])
 	{
         decisionHandler(WKNavigationActionPolicyCancel);
+        return;
 	}
 
 	[self.delegate authorizationViewControllerDidStartLoading:self];
@@ -195,6 +196,7 @@
             } else {
                 decisionHandler(WKNavigationActionPolicyCancel);
             }
+            return;
 		}
 	}
 	else if (self.connectionIsTrusted == NO)
@@ -203,6 +205,7 @@
 		self.connection = [[NSURLConnection alloc] initWithRequest:navigationAction.request delegate:self];
 		BOXLog(@"URLConnection is %@", self.connection);
         decisionHandler(WKNavigationActionPolicyCancel);
+        return;
 	}
 
     return decisionHandler(WKNavigationActionPolicyAllow);
